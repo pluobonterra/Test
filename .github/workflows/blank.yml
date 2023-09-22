@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: echo 'Hi ${{ env.PROD }}'
-      - run: echo 'Hi ${{ environment.name }}'
+    
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
