@@ -21,15 +21,13 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: production
-    env:
-      PROD: "prod"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - run: echo 'Hi ${{ env.PROD }}'
+      - run: echo 'Hi ${{ secrets.MATT_TEST }}'
     
 
       # Runs a single command using the runners shell
