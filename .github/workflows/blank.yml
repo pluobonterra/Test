@@ -27,7 +27,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - run: echo 'Hi ${{ env.MATT_TEST }}'
+      - run: echo 'Hi ${{ vars.MATT_TEST }}'
     
 
       # Runs a single command using the runners shell
