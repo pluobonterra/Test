@@ -28,7 +28,12 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: echo 'Hi ${{ vars.PROD }}'
-    
+      
+      - name: Use Secret
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          echo "My secret API key is $API_KEY"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
