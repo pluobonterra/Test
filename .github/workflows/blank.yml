@@ -35,6 +35,11 @@ jobs:
         run: |
           echo "My secret API key is $API_KEY"
 
+      - name: Use Action with Secrets
+        uses: echo 'Hi ${{ vars.PROD }}'
+        with:
+          api_key: ${{ secrets.API_KEY }}   
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
